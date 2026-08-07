@@ -1,0 +1,38 @@
+[
+  {
+    "id": "evt-101",
+    "titulo": "Torneo Comunitario de Gaming",
+    "descripcion": "Encuentro presencial de deportes electrónicos y juegos retro en el salón principal.",
+    "fecha": "2026-08-15T18:00:00",
+    "lugar": "Centro Comunitario - Salón A",
+    "categoria": "Recreación",
+    "imagen": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500"
+  },
+  {
+    "id": "evt-102",
+    "titulo": "Talleres de Software Libre y Linux",
+    "descripcion": "Aprende a instalar y configurar herramientas de código abierto para tu equipo.",
+    "fecha": "2026-08-22T10:00:00",
+    "lugar": "Biblioteca Municipal",
+    "categoria": "Educación",
+    "imagen": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500"
+  },
+  {
+    "id": "evt-103",
+    "titulo": "Jornada de Reciclaje y Eco-Lógica",
+    "descripcion": "Recolección de residuos electrónicos y charla sobre sostenibilidad comunitaria.",
+    "fecha": "2026-09-01T09:00:00",
+    "lugar": "Parque Principal",
+    "categoria": "Ecología",
+    "imagen": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=500"
+  },
+  {
+    "id": "evt-099",
+    "titulo": "Evento Expirado de Prueba (Purga)",
+    "descripcion": "Este evento tiene una fecha en el pasado y la tienda de datos debe eliminarlo dinámicamente.",
+    "fecha": "2025-01-10T12:00:00",
+    "lugar": "Plaza Central",
+    "categoria": "Cultura",
+    "imagen": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500"
+  }
+]
