@@ -1,3 +1,6 @@
+import { getProximosEvents } from '../store/eventsStore.js';
+import { createEventCard } from '../components/eventCard.js';
+
 export async function renderHomeView() {
   const container = document.createElement('section');
   container.className = 'home-view';
@@ -9,12 +12,24 @@ export async function renderHomeView() {
     </div>
     
     <div class="upcoming-section">
-      <h2>Próximos Eventos</h2>
-      <div id="home-events-container" class="events-grid">
-        <p>Cargando eventos próximos...</p>
-      </div>
+      <h2>⚡ Próximos Eventos Destacados</h2>
+      <div id="home-events-container" class="events-grid"></div>
     </div>
   `;
+
+  // Obtener los datos de los 3 eventos más cercanos
+  const eventsContainer = container.querySelector('#home-events-container');
+  const proximos = getProximosEvents(3);
+
+  if (proximos.length === 0) {
+    eventsContainer.innerHTML = `<p class="no-events">No hay eventos próximos programados.</p>`;
+  } else {
+    // Inyectar reutilizando el componente eventCard
+    proximos.forEach(evento => {
+      const cardNode = createEventCard(evento);
+      eventsContainer.appendChild(cardNode);
+    });
+  }
 
   return container;
 }

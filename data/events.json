@@ -27,6 +27,15 @@
     "imagen": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=500"
   },
   {
+    "id": "evt-104",
+    "titulo": "Evento Expirado de Prueba 4",
+    "descripcion": "Recolección de residuos electrónicos y charla sobre sostenibilidad comunitaria.",
+    "fecha": "2026-09-01T09:00:00",
+    "lugar": "Parque Principal",
+    "categoria": "Ecología",
+    "imagen": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=500"
+  },
+  {
     "id": "evt-099",
     "titulo": "Evento Expirado de Prueba (Purga)",
     "descripcion": "Este evento tiene una fecha en el pasado y la tienda de datos debe eliminarlo dinámicamente.",

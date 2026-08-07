@@ -1,4 +1,3 @@
-
 let eventsData = [];
 
 /**
@@ -16,8 +15,6 @@ export async function initEventsStore() {
     eventsData = rawEvents
       .filter(event => new Date(event.fecha) >= now)
       .sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
-
-    console.log('✅ Eventos vigentes cargados (expirados purgados):', eventsData);
   } catch (error) {
     console.error('Error en EventsStore:', error);
     eventsData = [];
