@@ -22,10 +22,11 @@ export function createCalendarWidget() {
     const monthName = currentDate.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' });
 
     container.innerHTML = `
+    <h2 class="banner-title">CALENDARIO DE EVENTOS</h2>
       <div class="calendar-header">
-        <button class="calendar-nav-btn" id="prev-month">◀ Anter</button>
-        <h3>📅 ${monthName}</h3>
-        <button class="calendar-nav-btn" id="next-month">Sig ▶</button>
+        <button class="calendar-nav-btn" id="prev-month">Mes Anterior</button>
+        <h3>${monthName}</h3>
+        <button class="calendar-nav-btn" id="next-month">Mes Siguiente</button>
       </div>
 
       <div class="calendar-grid">

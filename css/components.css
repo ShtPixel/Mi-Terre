@@ -332,7 +332,7 @@
 /* --- 2. CALENDARIO INTERACTIVO --- */
 .calendar-widget {
   background-color: var(--surface-color);
-  border: 1px solid var(--border-color);
+  /*border: 1px solid var(--border-color);*/ 
   border-radius: var(--radius);
   padding: 1.5rem;
   margin-bottom: 2.5rem;
@@ -350,20 +350,21 @@
   color: var(--text-main);
   text-transform: capitalize;
 }
-
+/* Botones de navegación del calendario OUTLINE */
 .calendar-nav-btn {
-  background: var(--surface-hover);
+  background: transparent;
   border: 1px solid var(--border-color);
-  color: var(--text-main);
+  color: var(--border-color);
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
   cursor: pointer;
   transition: var(--transition);
 }
 
+/* Botones de navegación del calendario cuando esta el cursor encima */
 .calendar-nav-btn:hover {
-  border-color: var(--primary-color);
   color: var(--primary-color);
+  background: var(--surface-hover);
 }
 
 .calendar-grid {
@@ -375,9 +376,10 @@
 
 .calendar-day-head {
   font-weight: 700;
-  color: var(--text-muted);
+  color: var(--text-section);
   font-size: 0.85rem;
   padding-bottom: 0.5rem;
+  
 }
 
 .calendar-day {
@@ -387,17 +389,19 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color: rgba(0, 60, 255, 0.156);
   border: 1px solid transparent;
   cursor: pointer;
   position: relative;
   font-size: 0.95rem;
   transition: var(--transition);
+  font-weight: bold;
 }
 
 .calendar-day:hover:not(.empty) {
-  border-color: var(--primary-color);
+  border-color: var(--surface-hover);
   background-color: var(--surface-hover);
+  color: var(--primary-color);
 }
 
 .calendar-day.empty {
@@ -406,15 +410,15 @@
 }
 
 .calendar-day.has-event {
-  background-color: rgba(56, 189, 248, 0.15);
-  border-color: var(--primary-color);
+  background-color: rgba(0, 60, 255, 0.156);
+  border-color: var(--border-color);
   font-weight: bold;
-  color: var(--primary-color);
+  color: var(--text-section);
 }
 
 .calendar-day .event-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   background-color: var(--primary-color);
   border-radius: 50%;
   margin-top: 2px;
@@ -423,6 +427,70 @@
 .selected-day-events {
   margin-top: 1.25rem;
   padding-top: 1rem;
+  
   border-top: 1px dashed var(--border-color);
 }
 
+/* --- COMPONENTE DE FILTROS--- */
+.filter-view-component {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  border-radius: var(--radius);
+  align-items: center;
+}
+
+.filter-group {
+  flex: 1 1 180px;
+}
+
+.filter-group.search-group {
+  flex: 2 1 250px;
+}
+
+.filter-input,
+.filter-select {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  background-color: var(--surface-hover);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.filter-input:focus,
+.filter-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.15);
+}
+
+.reset-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.reset-btn:hover {
+  background-color: var(--surface-hover);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}

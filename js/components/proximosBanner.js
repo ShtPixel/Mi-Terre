@@ -14,8 +14,12 @@ export function createProximosBanner(limit = 3) {
   const row = container.querySelector('#proximos-cards-row');
   const proximos = getProximosEvents(limit);
 
-  if (proximos.length === 5) {
-    row.innerHTML = `<p style="color: var(--text-section);">No hay eventos próximos.</p>`;
+  if (proximos.length === 0) {
+    row.innerHTML = `
+    <div class="no-elements-alert">
+        <p>No hay eventos próximos.</p>
+    </div>
+    `;
   } else {
     proximos.forEach(evt => {
       row.appendChild(createEventCard(evt));
