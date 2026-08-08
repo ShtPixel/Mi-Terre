@@ -1,6 +1,7 @@
 import { createProximosBanner } from '../components/proximosBanner.js';
 import { createCalendarWidget } from '../components/calendarWidget.js';
-import { getProximosEvents, getAllEvents } from '../store/eventsStore.js';
+import { createFilterView } from '../components/filterView.js';
+import { getAllEvents } from '../store/eventsStore.js';
 import { createEventCard } from '../components/eventCard.js';
 
 export async function renderEventsView() {
@@ -29,7 +30,31 @@ export async function renderEventsView() {
   const calendarWidget = createCalendarWidget();
   container.appendChild(calendarWidget);
 
-  // SUBSECCIÓN: Listado completo de eventos
+  // SUBSECCIÓN: Listado completo de eventos y filtro
+  const todosEventsData = getAllEvents();
+
+  //Obtener tipo y lugar sin duplicar?
+  const categories = [...new Set (todosEventsData.map(e => e.tipo))];
+  const locations = [...new Set (todosEventsData.map(e => e.lugar))];
+
+  const todosSection = document.createElement('section');
+  todosSection.className = 'todos-events-section';
+  todosSection.innerHTML = `
+    <h2 class="banner-title">Listado Completo de Eventos</h2>
+  `;
+
+  // Instancia de FilterView para el listado completo de eventos
+  const filterView = createFilterView({
+    items: todosEventsData,
+    renderItemFn: createEventCard, //Función que renderiza cada evento en tarjeta
+    categories: categories,
+    locations: locations,
+    placeholderSearch: 'Buscar eventos...'
+  });
+
+  todosSection.appendChild(filterView);
+  container.appendChild(todosSection);
+
 
   return container;
 }

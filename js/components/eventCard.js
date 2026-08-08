@@ -21,15 +21,13 @@ export function createEventCard(event) {
     <div class="event-card-body">
       <h3 class="event-title">${event.titulo}</h3>
       <span class="event-badge">${event.categoria || 'General'}</span>
+      <div class="event-meta-item">
+          <time datetime="${event.fecha}">${fechaFormateada}</time>
+        </div>
       <p class="event-description">${event.descripcion}</p>
       
       <div class="event-meta">
-        <div class="event-meta-item">
-          <time datetime="${event.fecha}">${fechaFormateada}</time>
-        </div>
-        <div class="event-meta-item">
-          <span>${event.lugar}</span>
-        </div>
+         <div class="event-meta-item">${event.lugar}</div>
       </div>
     </div>
   `;
