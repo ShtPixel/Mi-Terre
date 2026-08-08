@@ -12,7 +12,7 @@ export async function renderHomeView() {
     </div>
     
     <div class="upcoming-section">
-      <h2>⚡ Próximos Eventos Destacados</h2>
+      <h2>Próximos Eventos Destacados</h2>
       <div id="home-events-container" class="events-grid"></div>
     </div>
   `;

@@ -63,30 +63,38 @@
   text-align: center;
 }
 
+/* --- Alerta de Elementos No Encontrados o Sin Elementos --- */
+.no-elements-alert {
+  color: var(--text-alert);
+  text-align: center;
+  font-weight: 700;
+}
 
 
-/* --- Grilla de Eventos --- */
+
+/* --- Grilla de Eventos --- 
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-content: center;
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
+*/
 
 /* --- Tarjeta de Evento (Card) --- */
 .event-card {
-  background-color: var(--surface-color);
-  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
   border-radius: var(--radius);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: var(--transition);
+  text-align: center;
 }
 
 .event-card:hover {
   transform: translateY(-4px);
-  border-color: var(--primary-color);
   box-shadow: 0 10px 20px -10px rgba(56, 189, 248, 0.2);
 }
 
@@ -104,9 +112,9 @@
 }
 
 .event-badge {
-  align-self: flex-start;
-  background-color: rgba(56, 189, 248, 0.15);
-  color: var(--primary-color);
+  align-self: center;
+  background-color: var(--surface-color);
+  color: var(--surface-hover);
   font-size: 0.75rem;
   font-weight: 600;
   padding: 0.25rem 0.6rem;
@@ -120,10 +128,11 @@
   font-weight: 700;
   color: var(--text-main);
   margin-bottom: 0.5rem;
+  
 }
 
 .event-description {
-  color: var(--text-muted);
+  color: var(--text-section);
   font-size: 0.9rem;
   margin-bottom: 1rem;
   flex: 1;
@@ -133,6 +142,7 @@
   border-top: 1px solid var(--border-color);
   padding-top: 0.75rem;
   display: flex;
+  
   flex-direction: column;
   gap: 0.3rem;
   font-size: 0.85rem;
@@ -142,7 +152,9 @@
 .event-meta-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  color: #888;
 }
 
 /* (Adición Hero Text) */
@@ -158,16 +170,259 @@
 
 .hero h1 {
   font-size: 2.2rem;
-  color: var(--primary-color);
+  color: var(--text-section);
   margin-bottom: 0.5rem;
 }
 
 .hero p {
-  color: var(--text-muted);
+  color: var(--text-section);
   font-size: 1.1rem;
 }
 
-.upcoming-section h2 {
+
+/* --- Títulos de Sección --- */
+.section-title {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
+
+.section-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.events-section-block {
+  margin-bottom: 3.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* --- Vista Tipo Agenda / Calendario --- */
+.timeline-agenda {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.agenda-item {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: var(--transition);
+}
+
+.agenda-item:hover {
+  border-color: var(--primary-color);
+  background-color: var(--surface-hover);
+}
+
+.agenda-date-box {
+  background-color: rgba(56, 189, 248, 0.1);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 70px;
+}
+
+.agenda-day {
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.agenda-month {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.agenda-info h4 {
+  font-size: 1.05rem;
+  color: var(--text-main);
+}
+
+.agenda-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* --- Buscador en Tiempo Real --- */
+.search-bar-container {
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.search-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+
+
+/* --- 1. BANNER PRÓXIMOS EVENTOS (1 sola fila horizontal) --- */
+
+/*un hp cuadro de color donde estan las tarjetas de evento*/
+.proximos-banner {
+  background: var(--surface-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.proximos-banner .banner-title {
+  font-size: 1.4rem;
+  color: var(--text-section);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700; /* Aumentar el peso de la fuente para resaltar el título */
+}
+
+/* Forzar una sola fila estricta con scroll horizontal si desborda */
+.proximos-row {
+  display:flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-behavior: smooth;
+}
+
+/* Asegurar que las cards dentro de proximos-row no se distorsionen */
+.proximos-row .event-card {
+  flex: 0 0 300px; /* Ancho fijo para mantener la fila uniforme */
+  max-width: 300px;
+}
+
+/* Personalizar la barra de scroll horizontal */
+.proximos-row::-webkit-scrollbar {
+  height: 6px;
+}
+.proximos-row::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+/* --- 2. CALENDARIO INTERACTIVO --- */
+.calendar-widget {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.calendar-header h3 {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  text-transform: capitalize;
+}
+
+.calendar-nav-btn {
+  background: var(--surface-hover);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.calendar-nav-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.calendar-day-head {
+  font-weight: 700;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding-bottom: 0.5rem;
+}
+
+.calendar-day {
+  min-height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: relative;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.calendar-day:hover:not(.empty) {
+  border-color: var(--primary-color);
+  background-color: var(--surface-hover);
+}
+
+.calendar-day.empty {
+  cursor: default;
+  background: transparent;
+}
+
+.calendar-day.has-event {
+  background-color: rgba(56, 189, 248, 0.15);
+  border-color: var(--primary-color);
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.calendar-day .event-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.selected-day-events {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-color);
+}
+

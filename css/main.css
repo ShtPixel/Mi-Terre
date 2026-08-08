@@ -6,11 +6,11 @@
   --surface-color: #e8f0ff;     /* Color de tarjetas y contenedores */
   --surface-hover: #646efa;  /* Color de hover de tarjetas y contenedores */
   --primary-color: #ffff;     
-  --text-main: #f8fafc;         /* Texto principal */
+  --text-main: #000000;         /* Texto principal */
   --text-section: #000000;      /* Texto de secciones */
   --text-muted: #bdd4ff;        /* Texto secundario */
-  --border-color: #646efa;       /* Color de bordes */
-  
+  --border-color: #646efa;
+  --text-alert: #db1111;        /* Color de alertas */
   --font-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --max-width: 1200px;
   --radius: 12px;

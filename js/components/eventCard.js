@@ -19,16 +19,16 @@ export function createEventCard(event) {
   card.innerHTML = `
     <img src="${event.imagen}" alt="${event.titulo}" class="event-card-image" loading="lazy">
     <div class="event-card-body">
-      <span class="event-badge">${event.categoria || 'General'}</span>
       <h3 class="event-title">${event.titulo}</h3>
+      <span class="event-badge">${event.categoria || 'General'}</span>
       <p class="event-description">${event.descripcion}</p>
       
       <div class="event-meta">
         <div class="event-meta-item">
-          <span>📅</span> <time datetime="${event.fecha}">${fechaFormateada}</time>
+          <time datetime="${event.fecha}">${fechaFormateada}</time>
         </div>
         <div class="event-meta-item">
-          <span>📍</span> <span>${event.lugar}</span>
+          <span>${event.lugar}</span>
         </div>
       </div>
     </div>

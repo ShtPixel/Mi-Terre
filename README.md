@@ -6,7 +6,7 @@ mi-hp-páginaa/
 ├── index.html <-- HTML único(Layout Shell y punto de montaje)
 │
 ├── css/
-│   ├── main.css <-- Variables global CSS, reset, tipografía y utilidades  base
+│   ├── main.css <-- Variables global CSS, reset, tipografía y utilidades base
 │   └── components.css <-- Estilos de componentes (Navbar, Tarjetas, Tabs, Botones)
 │
 ├── data/
