@@ -38,7 +38,7 @@ export async function renderEventsView() {
   const locations = [...new Set (todosEventsData.map(e => e.lugar))];
 
   const todosSection = document.createElement('section');
-  todosSection.className = 'todos-events-section';
+  todosSection.className = 'filter-view-component';
   todosSection.innerHTML = `
     <h2 class="banner-title">Listado Completo de Eventos</h2>
   `;

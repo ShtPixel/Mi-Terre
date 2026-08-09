@@ -5,17 +5,40 @@ export function renderNavbar() {
   const container = document.getElementById('navbar-container');
 
   container.innerHTML = `
-    <nav class="navbar">
-      <div class="navbar-inner">
-        <a href="#/" class="logo">
-          <span>🌐</span> Mi Terre
-        </a>
-        <ul class="nav-links">
-          <li><a href="#/" class="nav-link" id="nav-home">Inicio</a></li>
-          <li><a href="#/eventos" class="nav-link" id="nav-events">Eventos</a></li>
+    <nav class="navbar navbar-expand-lg sticky-top border-bottom navbar-dark" style="background-color: var(--surface-hover);">
+    <div class="container">
+      <a href="#/" class="navbar-brand fw-bold text-white d-flex align-items-center gap-2">
+        <span>Mi Terre</span>
+      </a>
+
+      <button
+        class="navbar-toggler border-white"
+        type="button"
+        
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Abrir navegación"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item">
+            <a href="#/" class="nav-link text-white px-3 rounded" id="nav-home">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#/eventos" class="nav-link text-white px-3 rounded" id="nav-events">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#/noticias" class="nav-link text-white px-3 rounded" id="nav-news">Noticias</a>
+          </li>
         </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
   `;
 }
 
