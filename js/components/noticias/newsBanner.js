@@ -13,10 +13,10 @@ export function createNewsBanner(totalNews = 6) {
     <h2 class="banner-title">Noticias Recientes</h2>
 
     <!-- 2. FILA DE BOTONES Y CARDS (SÁNDWICH) -->
-    <div class="news-banner-body">
+    <div class="cards-banner-body">
       <button class="banner-btn btn-prev" id="prev-news-btn" aria-label="Anterior">❮</button>
       
-      <div class="news-track" id="news-track-container"></div>
+      <div class="card-track" id="news-track-container"></div>
       
       <button class="banner-btn btn-next" id="next-news-btn" aria-label="Siguiente">❯</button>
     </div>

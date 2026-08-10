@@ -17,17 +17,21 @@ export function createEventCard(event) {
   });
 
   card.innerHTML = `
-    <img src="${event.imagen}" alt="${event.titulo}" class="event-card-image" loading="lazy">
+    <div class="event-card-image-container">
+      <span class="event-badge">${event.categoria || 'General'}</span>
+      <img src="${event.imagen}" alt="${event.titulo}" class="event-card-image" loading="lazy">
+    </div>
     <div class="event-card-body">
       <h3 class="event-title">${event.titulo}</h3>
       <span class="event-badge">${event.categoria || 'General'}</span>
-      <div class="event-meta-item">
-          <time datetime="${event.fecha}">${fechaFormateada}</time>
-        </div>
       <p class="event-description">${event.descripcion}</p>
       
       <div class="event-meta">
          <div class="event-meta-item">${event.lugar}</div>
+         <div class="event-meta-item">
+          <time datetime="${event.fecha}">${fechaFormateada}</time>
+        </div>
+         <button class="read-more-btn" data-id="${event.id}">Leer Más</button>
       </div>
     </div>
   `;
