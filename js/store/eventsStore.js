@@ -7,7 +7,7 @@ export async function initEventsStore() {
   try {
     const response = await fetch('./data/events.json');
     if (!response.ok) throw new Error('No se pudo cargar la base de datos de eventos.');
-    
+
     const rawEvents = await response.json();
     const now = new Date();
 

@@ -1,5 +1,6 @@
 import { renderNavbar } from './components/navbar.js';
 import { initEventsStore } from './store/eventsStore.js';
+import { initNewsStore } from './store/newsStore.js';
 import { initRouter } from './router.js';
 
 async function main() {
@@ -10,7 +11,10 @@ async function main() {
     // 2. Cargar e inicializar base de datos de eventos (Store)
     await initEventsStore();
 
-    // 3. Arrancar el Router para manejar el contenido dinámico
+    //3. Cargar e inicializar base de datos de noticias (Store)
+    await initNewsStore();
+
+    // 4. Arrancar el Router para manejar el contenido dinámico
     initRouter();
 
 }

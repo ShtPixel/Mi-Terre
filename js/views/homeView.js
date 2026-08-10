@@ -1,4 +1,5 @@
 import { createProximosBanner } from '../components/proximosBanner.js';
+import { createNewsBanner } from '../components/noticias/newsBanner.js';
 
 
 export async function renderHomeView() {
@@ -14,6 +15,10 @@ export async function renderHomeView() {
 
   const proximosBanner = createProximosBanner(3);
   container.appendChild(proximosBanner);
+
+  // Inyectar el banner pidiendo, por ejemplo, las 6 noticias más recientes (dará 2 páginas de 3 cards)
+  const newsBanner = createNewsBanner(6);
+  container.appendChild(newsBanner);
 
   return container;
 }

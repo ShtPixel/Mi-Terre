@@ -7,7 +7,7 @@ export function createProximosBanner(limit = 3) {
   container.className = 'proximos-banner';
 
   container.innerHTML = `
-    <h2 class="banner-title">Próximos Eventos Destacados</h2>
+    <h2 class="banner-title">Próximos Eventos</h2>
     <div class="proximos-row" id="proximos-cards-row"></div>
   `;
 
@@ -18,8 +18,7 @@ export function createProximosBanner(limit = 3) {
     row.innerHTML = `
     <div class="no-elements-alert">
         <p>No hay eventos próximos.</p>
-    </div>
-    `;
+    </div>`;
   } else {
     proximos.forEach(evt => {
       row.appendChild(createEventCard(evt));

@@ -1,13 +1,49 @@
 /* --- Navbar Principal --- */
-.navbar .nav-link {
+.navbar {
+  background-color: var(--surface-hover);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 500;
   transition: var(--transition);
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link.active {
-  background-color: rgba(255, 255, 255, 0.18);
-  color: #ffffff;
-  font-weight: 600;
+.nav-link:hover {
+  color: var(--text-main);
+  background-color: var(--surface-hover);
 }
 
 /* Estado activo resaltado */
@@ -48,6 +84,7 @@
   flex-direction: column;
   transition: var(--transition);
   text-align: center;
+
   width: 290px;
     min-height: 410px;
 }
