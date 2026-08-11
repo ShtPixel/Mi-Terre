@@ -85,6 +85,12 @@
   transition: var(--transition);
   text-align: center;
 
+  
+  flex: 0 0 calc((100% - 2rem) / 3);
+  width: calc((100% - 2rem) / 3);
+  min-width: calc((100% - 2rem) / 3);
+
+
   width: 290px;
     min-height: 410px;
 }
@@ -100,7 +106,7 @@
   object-fit: cover;
 }
 
-.event-card-image-container {
+.card-image-container {
   position: relative;
 }
 

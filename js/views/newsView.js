@@ -1,4 +1,5 @@
 import { createFilterView } from '../components/filterView.js';
+import { createNewsBanner } from '../components/noticias/newsBanner.js';
 
 
 export async function renderNewsView() {
@@ -18,6 +19,11 @@ export async function renderNewsView() {
         </div>
     `;
     container.appendChild(header);
+
+
+    // Inyectar el banner pidiendo, por ejemplo, las 6 noticias más recientes (dará 2 páginas de 3 cards)
+    const newsBanner = createNewsBanner(6);
+    container.appendChild(newsBanner);
 
     return container;
 }
