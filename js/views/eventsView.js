@@ -34,7 +34,7 @@ export async function renderEventsView() {
   const todosEventsData = getAllEvents();
 
   //Obtener tipo y lugar sin duplicar?
-  const categories = [...new Set (todosEventsData.map(e => e.tipo))];
+  const categories = [...new Set (todosEventsData.map(e => e.categoria))];
   const locations = [...new Set (todosEventsData.map(e => e.lugar))];
 
   const todosSection = document.createElement('section');

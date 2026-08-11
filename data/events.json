@@ -36,10 +36,38 @@
     "imagen": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=500"
   },
   {
+    "id": "evt-105",
+    "titulo": "Evento Expirado de Prueba 5",
+    "descripcion": "Recolección de residuos electrónicos y charla sobre sostenibilidad comunitaria.",
+    "fecha": "2026-11-11T09:00:00",
+    "lugar": "Parque Principal",
+    "categoria": "Ecología",
+    "imagen": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=500"
+  },
+  {
+    "id": "evt-106",
+    "titulo": "Evento Expirado de Prueba 6",
+    "descripcion": "Recolección de residuos electrónicos y charla sobre sostenibilidad comunitaria.",
+    "fecha": "2026-09-01T09:00:00",
+    "lugar": "Parque Principal",
+    "categoria": "Ecología",
+    "imagen": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=500"
+  },
+  
+  {
     "id": "evt-099",
     "titulo": "Evento Expirado de Prueba (Purga)",
     "descripcion": "Este evento tiene una fecha en el pasado y la tienda de datos debe eliminarlo dinámicamente.",
     "fecha": "2025-01-10T12:00:00",
+    "lugar": "Plaza Central",
+    "categoria": "Cultura",
+    "imagen": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500"
+  },
+  {
+    "id": "evt-105",
+    "titulo": "Evento Futuro de Prueba (Purga)",
+    "descripcion": "Este evento tiene una fecha en el futuro y la tienda de datos debe eliminarlo dinámicamente.",
+    "fecha": "2027-01-10T12:00:00",
     "lugar": "Plaza Central",
     "categoria": "Cultura",
     "imagen": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500"

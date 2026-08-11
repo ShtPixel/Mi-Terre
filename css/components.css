@@ -596,3 +596,73 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+
+/* --- FIX CENTRADO DEL MODAL NATIVO --- */
+.detail-modal {
+  border: none;
+  border-radius: var(--radius, 12px);
+  padding: 0;
+  
+  /* ESTOS 3 ATRIBUTOS CENTRAN EL MODAL DE VERDAD EN PANTALLA */
+  margin: auto;
+  position: fixed;
+  inset: 0;
+
+  max-width: 580px;
+  width: 90%;
+  background-color: var(--bg-color, #ffffff);
+  color: var(--text-color, #0f172a);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.detail-modal::backdrop {
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+/* --- ESTILOS DEL BOTÓN REUTILIZABLE DE FAVORITOS --- */
+.fav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  border: 1px solid #cbd5e1;
+  color: #64748b;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.fav-btn .fav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  transition: color 0.2s ease;
+}
+
+.fav-btn:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.fav-btn:hover .fav-icon {
+  color: #ef4444;
+}
+
+/* Estado Activo (Cuando ya es favorito) */
+.fav-btn.is-active {
+  background-color: #fef2f2;
+  border-color: #ef4444;
+  color: #dc2626;
+}
+
+.fav-btn.is-active .fav-icon {
+  color: #dc2626;
+}

@@ -1,5 +1,6 @@
 // js/components/newsBanner.js
 import { getRecentNews } from '../../store/newsStore.js';
+
 import { createNewsCard } from './newsCard.js';
 
 export function createNewsBanner(totalNews = 6) {
