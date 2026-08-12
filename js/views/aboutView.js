@@ -1,4 +1,5 @@
-const PATH_GITHUB_ICON = '../../assets/icons/brand-instagram.svg';
+const PATH_GITHUB_ICON = '.../../assets/icons/kugo.png';
+
 
 export async function renderAboutView() {
     const container = document.createElement ('div');
@@ -36,7 +37,7 @@ export async function renderAboutView() {
     <div class="info-section">
       <h2 class = "banner-title">Desarrollador</h2>
       <p>
-        El desarrollador de esta pagina es muy inteligente y muy guapo jiji, y tu eres un tonto.
+        El desarrollador de esta pagina es muy inteligente y muy guapo jiji, y tu eres un tonto. por dios carga botoncito
       </p>
       <!--BOTONES PARA CANALES DE COMUNICACION-->
       <a href = "https://github.com/ShtPixel">

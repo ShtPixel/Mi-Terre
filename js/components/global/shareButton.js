@@ -1,4 +1,5 @@
-const PATH_SHARE = '../..assets/icons/share.svg'; // Revisa que el nombre coincida con tu SVG
+const PATH_SHARE = '../../../assets/icons/share.svg'; // ruta malparida no funciona en el server
+//import {img} from '../../../assets/icons/share.svg';
 
 /**
  * Crea un botón de compartir reutilizable
