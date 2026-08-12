@@ -3,6 +3,11 @@
  * @param {Object} event - Objeto con los datos del evento
  * @returns {HTMLElement} Nodo de la tarjeta
  */
+
+import { isFavorite, toggleFavorite } from '../store/favorites/favoritesStore.js';
+import { openDetailModal } from './global/detailModal.js';
+import { createFavButton } from './global/favButton.js';
+
 export function createEventCard(event) {
   const card = document.createElement('article');
   card.className = 'event-card';
@@ -40,11 +45,25 @@ export function createEventCard(event) {
        
         </div>
         
-        <button class="read-more-btn" data-id="${event.id}">Leer Más</button>
-      
+        <div class="event-meta-item">
+          <button class="read-more-btn" data-id="${event.id}">Leer Más</button>
+          <div class="fav-btn-container"></div>
+        </div>
       </div>
     </div>
   `;
+
+  // 1. Evento para abrir el modal con el detalle
+  const readMoreBtn = card.querySelector('.read-more-btn');
+  readMoreBtn.addEventListener('click', () => {
+    openDetailModal(event);
+  });
+ 
+  // 2. Botón de favorito
+  const actionsContainer = card.querySelector('.fav-btn-container');
+  const favBtn = createFavButton(event.id, { showLabel: true });
+  actionsContainer.appendChild(favBtn);
+
 
   return card;
 }

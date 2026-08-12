@@ -21,21 +21,24 @@ export function openDetailModal(item) {
   // 2. Inyectar la plantilla HTML (dejamos .modal-actions vacío para inyectar los botones después)
   modal.innerHTML = `
     <div class="modal-content">
+      <div = "card-image-container">
+      <span class="event-badge" style="margin-bottom: 0.5rem; display: inline-block;">
+        ${item.categoria || 'General'}
+      </span>
       <img src="${item.imagen}" alt="${item.titulo}" class="modal-img">
-      
+      </div>
+
       <div class="modal-body">
         <div class="modal-header">
           <div>
-            <span class="news-badge" style="margin-bottom: 0.5rem; display: inline-block;">
-              ${item.categoria || 'General'}
-            </span>
+            
             <h2 class="modal-title">${item.titulo}</h2>
           </div>
           <button class="modal-close-btn" id="close-modal-btn">✕</button>
         </div>
 
         <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem;">
-          📅 ${fechaFormateada} ${item.lugar ? `| 📍 ${item.lugar}` : ''}
+           ${fechaFormateada} ${item.lugar ? `|  ${item.lugar}` : ''}
         </p>
 
         <p style="line-height: 1.6; color: #334155;">
