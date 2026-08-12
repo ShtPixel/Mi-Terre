@@ -7,6 +7,7 @@
 
 import { isFavorite, toggleFavorite } from '../../store/favorites/favoritesStore.js';
 import { openDetailModal } from '../global/detailModal.js';
+import { createFavButton } from '../global/favButton.js';
 
 export function createNewsCard(news, maxDescLength = 90) {
   const card = document.createElement('article');
@@ -44,12 +45,15 @@ export function createNewsCard(news, maxDescLength = 90) {
         <div class= "event-meta-item">
           <span style="color: var(--text-muted);">${fechaFormateada}</span>
         </div>
-        <button class="fav-btn card-fav-btn ${favActivo ? 'active' : ''}">
-          ${favActivo ? '❤️' : '🤍'}
-        </button>
-       
-        <button class="read-more-btn" data-id="${news.id}">Leer Más</button>
         
+        <div class="event-meta-item">
+          <span style="color: var(--text-muted);">${news.lugar}</span>
+        </div>
+
+        <div class="event-meta-item">
+        <button class="read-more-btn" data-id="${news.id}">Leer Más</button>
+        <div class="fav-btn-container"></div>
+        </div>
       </div>
     </div>
   `;
@@ -63,22 +67,10 @@ export function createNewsCard(news, maxDescLength = 90) {
     openDetailModal(news);
   });
  
-  // 2. Evento para guardar favorito directo desde la card
-  const favBtn = card.querySelector('.card-fav-btn');
-  favBtn.addEventListener('click', (e) => {
-    e.stopPropagation(); // Para no abrir el modal si le da clic al corazón
-    const saved = toggleFavorite(news.id);
-    favBtn.classList.toggle('active', saved);
-    favBtn.innerHTML = saved ? '❤️' : '🤍';
-  });
-
-  // Escuchar si se actualizó desde el modal para sincronizar la tarjeta
-  document.addEventListener('favoriteUpdated', (e) => {
-    if (e.detail.id === news.id) {
-      favBtn.classList.toggle('active', e.detail.saved);
-      favBtn.innerHTML = e.detail.saved ? '❤️' : '🤍';
-    }
-  });
+  // 2. Botón de favorito
+  const actionsContainer = card.querySelector('.fav-btn-container');
+  const favBtn = createFavButton(news.id, { showLabel: true });
+  actionsContainer.appendChild(favBtn);
 
   return card;
 }

@@ -666,3 +666,13 @@
 .fav-btn.is-active .fav-icon {
   color: #dc2626;
 }
+
+/* --- ICONO DE FAVORITO DENTRO DEL BOTÓN DE FAVORITOS--- */
+
+.fav-icon-img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  pointer-events: none; /* Para que el clic vaya directo al botón */
+}
