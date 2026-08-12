@@ -33,7 +33,7 @@ export function createNewsCard(news, maxDescLength = 90) {
     </div>
     <div class="event-card-body">
 
-      <h3 class="nevent-title">${news.titulo}</h3>
+      <h3 class="event-title">${news.titulo}</h3>
       <p class="event-description">${descCorta}</p>
 
       <div class="event-meta">

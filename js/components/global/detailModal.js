@@ -1,5 +1,6 @@
 // js/components/detailModal.js
 import { createFavButton } from './favButton.js';
+import { createShareButton } from './shareButton.js';
 
 export function openDetailModal(item) {
   // 1. Buscar si ya existe el modal en el DOM o crearlo
@@ -51,21 +52,33 @@ export function openDetailModal(item) {
     </div>
   `;
 
-  // 3. AHORA SÍ buscamos el contenedor e inyectamos el botón reutilizable
+  // 3. Inyectamos los botones en las acciones del modal
   const actionsContainer = modal.querySelector('.modal-actions');
+
+  // 4. Botón de favoritousss
   const favBtn = createFavButton(item.id, { showLabel: true });
   actionsContainer.appendChild(favBtn);
 
-  // 4. Evento para cerrar el modal con la 'X'
+  //5. Botón para compartirle a tu amigo el pendejo
+  const shareBtn = createShareButton({
+    title: item.titulo,
+    text: item.descripcion,
+    url: window.location.href // O el link directo al item si usas rutas
+  }, { showLabel: true
+  })
+
+  actionsContainer.appendChild(shareBtn);
+
+  // 6. Evento para cerrar el modal con la 'X'
   modal.querySelector('#close-modal-btn').addEventListener('click', () => {
     modal.close();
   });
 
-  // 5. Cerrar al hacer clic en el backdrop fuera del modal
+  // 7. Cerrar al hacer clic en el backdrop fuera del modal
   modal.addEventListener('click', (e) => {
     if (e.target === modal) modal.close();
   });
 
-  // 6. Mostrar el modal nativo centrado
+  // 8. Mostrar el modal nativo centrado
   modal.showModal();
 }

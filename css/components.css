@@ -710,3 +710,41 @@
   object-fit: contain;
   pointer-events: none; /* Para que el clic vaya directo al botón */
 }
+
+/* --- BOTÓN DE COMPARTIR REUTILIZABLE --- */
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  border: 1px solid #cbd5e1;
+  color: #64748b;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.share-icon-img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.share-btn:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+  background-color: #eff6ff;
+}
+
+/* Estado de enlace copiado */
+.share-btn.copied {
+  background-color: #dcfce7;
+  border-color: #22c55e;
+  color: #15803d;
+}
