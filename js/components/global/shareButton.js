@@ -1,4 +1,4 @@
-const PATH_SHARE = '../../assets/icons/share.svg'; // Revisa que el nombre coincida con tu SVG
+const PATH_SHARE = '../..assets/icons/share.svg'; // Revisa que el nombre coincida con tu SVG
 
 /**
  * Crea un botón de compartir reutilizable

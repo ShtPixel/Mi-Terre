@@ -1,3 +1,5 @@
+const PATH_GITHUB_ICON = '../../assets/icons/brand-instagram.svg';
+
 export async function renderAboutView() {
     const container = document.createElement ('div');
     container.className = 'about-page-view';
@@ -36,8 +38,13 @@ export async function renderAboutView() {
       <p>
         El desarrollador de esta pagina es muy inteligente y muy guapo jiji, y tu eres un tonto.
       </p>
+      <!--BOTONES PARA CANALES DE COMUNICACION-->
+      <a href = "https://github.com/ShtPixel">
+        <button>
+          <img src = "${PATH_GITHUB_ICON}"></img>
+        </button>
+      </a>
     </div>
-
     `;
     container.appendChild(section);
 
