@@ -2,12 +2,14 @@ import { renderHomeView } from './views/homeView.js';
 import { renderEventsView } from './views/eventsView.js';
 import { updateActiveNavLink } from './components/navbar.js';
 import { renderNewsView } from './views/newsView.js';
+import { renderAboutView} from './views/aboutView.js'
 
 // Mapeo de rutas (Hash -> Función creadora de la Vista)
 const routes = {
   '#/': renderHomeView,
   '#/eventos': renderEventsView,
-  '#/noticias': renderNewsView
+  '#/noticias': renderNewsView,
+  '#/acerca-de': renderAboutView
 };
 
 /**

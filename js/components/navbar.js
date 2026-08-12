@@ -35,6 +35,9 @@ export function renderNavbar() {
           <li class="nav-item">
             <a href="#/noticias" class="nav-link text-white px-3 rounded" id="nav-news">Noticias</a>
           </li>
+          <li class="nav-item">
+            <a href="#/acerca-de" class="nav-link text-white px-3 rounded" id="nav-news">Acerca De</a>
+          </li>
         </ul>
       </div>
     </div>
