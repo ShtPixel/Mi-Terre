@@ -43,17 +43,17 @@ export async function renderAboutView() {
       </p>
       <!--BOTONES PARA CANALES DE COMUNICACION-->
       <a href = "https://github.com/ShtPixel">
-        <button>
+        <button class = "share-btn">
           <img src = "${PATH_GITHUB_ICON}"></img>
         </button>
       </a>
       <a href = "https://www.instagram.com/sht.julian/">
-        <button>
+        <button class = "share-btn">
           <img src = "${PATH_INKAGRAM_ICON}"></img>
         </button>
       </a>
       <a href = "mailto:julian924lol@gmail.com">
-        <button>
+        <button class = "share-btn">
           <img src = "${PATH_MAIL_ICON}"></img>
         </button>
       </a>
