@@ -1,6 +1,6 @@
-// js/components/detailModal.js
 import { createFavButton } from './favButton.js';
 import { createShareButton } from './shareButton.js';
+import { createCalendarButton } from './calendarButton.js';
 
 export function openDetailModal(item) {
   // 1. Buscar si ya existe el modal en el DOM o crearlo
@@ -67,18 +67,24 @@ export function openDetailModal(item) {
   }, { showLabel: true
   })
 
+  // 6. Botón Calendario (Solo si es un evento con lugar/fecha)
+  if (item.lugar || item.tipo === 'evento') {
+    const calBtn = createCalendarButton(item, { showLabel: true });
+    actionsContainer.appendChild(calBtn);
+  }
+
   actionsContainer.appendChild(shareBtn);
 
-  // 6. Evento para cerrar el modal con la 'X'
+  // 7. Evento para cerrar el modal con la 'X'
   modal.querySelector('#close-modal-btn').addEventListener('click', () => {
     modal.close();
   });
 
-  // 7. Cerrar al hacer clic en el backdrop fuera del modal
+  // 8. Cerrar al hacer clic en el backdrop fuera del modal
   modal.addEventListener('click', (e) => {
     if (e.target === modal) modal.close();
   });
 
-  // 8. Mostrar el modal nativo centrado
+  // 9. Mostrar el modal nativo centrado
   modal.showModal();
 }

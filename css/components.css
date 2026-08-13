@@ -763,3 +763,35 @@
   margin-bottom: 1rem;
   font-weight: 700;
 }
+
+/* --- BOTÓN REUTILIZABLE DE GOOGLE CALENDAR --- */
+.calendar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  border: 1px solid #cbd5e1;
+  color: #64748b;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.calendar-icon-img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.calendar-btn:hover {
+  border-color: #16a34a;
+  color: #16a34a;
+  background-color: #f0fdf4;
+}

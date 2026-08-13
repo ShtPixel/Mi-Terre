@@ -15,8 +15,7 @@ async function main() {
     //3. Cargar e inicializar base de datos de noticias (Store)
     await initNewsStore();
 
-    //4. Cargar e inicializar vista de about
-    renderAboutView();
+   
 
     // 5. Arrancar el Router para manejar el contenido dinámico
     initRouter();

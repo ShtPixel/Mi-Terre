@@ -3,6 +3,8 @@ import { createCalendarWidget } from '../components/calendarWidget.js';
 import { createFilterView } from '../components/filterView.js';
 import { getAllEvents } from '../store/eventsStore.js';
 import { createEventCard } from '../components/eventCard.js';
+import { createInteractiveMap } from '../components/global/interactiveMap.js';
+
 
 export async function renderEventsView() {
   const container = document.createElement('div');
@@ -42,6 +44,10 @@ export async function renderEventsView() {
   todosSection.innerHTML = `
     <h2 class="banner-title">Listado Completo de Eventos</h2>
   `;
+
+  // Mapa interactivo
+  const mapElement = createInteractiveMap(todosEventsData);
+  container.appendChild(mapElement); // Se coloca arriba de los eventos
 
   // Instancia de FilterView para el listado completo de eventos
   const filterView = createFilterView({

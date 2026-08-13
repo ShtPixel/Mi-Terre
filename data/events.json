@@ -6,7 +6,10 @@
     "fecha": "2026-08-15T18:00:00",
     "lugar": "Centro Comunitario - Salón A",
     "categoria": "Recreación",
-    "imagen": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500"
+    "imagen": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500",
+    "lat": 1.126685, 
+    "lng": -77.853676
+  
   },
   {
     "id": "evt-102",
