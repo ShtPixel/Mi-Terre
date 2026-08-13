@@ -1,4 +1,6 @@
-const PATH_GITHUB_ICON = '.../../assets/icons/kugo.png';
+const PATH_GITHUB_ICON = '.../../assets/icons/github.png';
+const PATH_INKAGRAM_ICON = '.../../assets/icons/instagram.png';
+const PATH_MAIL_ICON = '.../../assets/icons/mail.png';
 
 
 export async function renderAboutView() {
@@ -43,6 +45,16 @@ export async function renderAboutView() {
       <a href = "https://github.com/ShtPixel">
         <button>
           <img src = "${PATH_GITHUB_ICON}"></img>
+        </button>
+      </a>
+      <a href = "https://www.instagram.com/sht.julian/">
+        <button>
+          <img src = "${PATH_INKAGRAM_ICON}"></img>
+        </button>
+      </a>
+      <a href = "mailto:julian924lol@gmail.com">
+        <button>
+          <img src = "${PATH_MAIL_ICON}"></img>
         </button>
       </a>
     </div>

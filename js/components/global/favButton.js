@@ -1,7 +1,7 @@
 import { isFavorite, toggleFavorite } from '../../store/favorites/favoritesStore.js';
 
-const PATH_OUTLINE = '../../assets/icons/heart-outline.svg';
-const PATH_FILLED = '../../assets/icons/heart-bold.svg';
+const PATH_OUTLINE = '../../assets/icons/heart-outline.png';
+const PATH_FILLED = '../../assets/icons/heart-fill.png';
 
 
 

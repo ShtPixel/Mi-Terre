@@ -1,4 +1,4 @@
-const PATH_SHARE = '../../../assets/icons/share.svg'; // ruta malparida no funciona en el server
+const PATH_SHARE = '../../../assets/icons/share.png'; // ruta malparida no funciona en el server
 //import {img} from '../../../assets/icons/share.svg';
 
 /**
