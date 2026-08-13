@@ -47,7 +47,7 @@ export async function renderEventsView() {
 
   // Mapa interactivo
   const mapElement = createInteractiveMap(todosEventsData);
-  container.appendChild(mapElement); // Se coloca arriba de los eventos
+  container.appendChild(mapElement); 
 
   // Instancia de FilterView para el listado completo de eventos
   const filterView = createFilterView({
