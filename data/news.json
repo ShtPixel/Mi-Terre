@@ -1,75 +1,47 @@
 [
-    {
+  {
     "id": "nw-001",
     "titulo": "ejemplo 01",
     "categoria": "Educación",
-    "fecha": "2026-10-15T18:00:00", 
+    "fecha": "2026-10-15T18:00:00",
     "descripcion": "lorem ipsilum ",
     "lugar": "Biblioteca Municipal",
     "imagen": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500"
-    },
-    {
-    "id": "nw-001",
-    "titulo": "ejemplo 01",
-    "categoria": "Educación",
-    "fecha": "2026-10-15T18:00:00", 
-    "descripcion": "lorem ipsilum ",
-    "imagen": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500"
-    },
-    {
-    "id": "nw-001",
-    "titulo": "ejemplo 01",
-    "categoria": "Educación",
-    "fecha": "2026-10-15T18:00:00", 
-    "descripcion": "lorem ipsilum ",
-    "imagen": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500"
-    },
-    {
-    "id": "nw-001",
-    "titulo": "ejemplo 01",
-    "categoria": "Educación",
-    "fecha": "2026-10-15T18:00:00", 
-    "descripcion": "lorem ipsilum ",
-    "imagen": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500"
-    },
-    {
-    "id": "nw-001",
-    "titulo": "ejemplo 01",
-    "categoria": "Educación",
-    "fecha": "2026-10-15T18:00:00", 
-    "descripcion": "lorem ipsilum ",
-    "imagen": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500"
-    },
-    {
-    "id": "nw-001",
-    "titulo": "ejemplo 01",
-    "categoria": "Educación",
-    "fecha": "2026-10-15T18:00:00", 
-    "descripcion": "lorem ipsilum ",
-    "imagen": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500"
-    },
-    {
-    "id": "nw-001",
-    "titulo": "ejemplo 01",
-    "categoria": "Educación",
-    "fecha": "2026-10-15T18:00:00", 
-    "descripcion": "lorem ipsilum ",
-    "imagen": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500"
-    },
-    {
-    "id": "nw-001",
-    "titulo": "ejemplo 01",
-    "categoria": "Educación",
-    "fecha": "2026-10-15T18:00:00", 
-    "descripcion": "lorem ipsilum ",
-    "imagen": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500"
-    },
-    {
-    "id": "nw-001",
-    "titulo": "pruerba purgaaaaaaa hp 01",
-    "categoria": "Educación",
-    "fecha": "2025-10-15T18:00:00", 
-    "descripcion": "lorem ipsilum ",
-    "imagen": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500"
-    }
+  },
+  {
+    "id": "nw-002",
+    "titulo": "Taller de Robótica e Inteligencia Artificial",
+    "categoria": "Tecnología",
+    "fecha": "2026-10-18T10:00:00",
+    "descripcion": "Curso práctico de introducción a la automatización y programación de sensores para jóvenes y adultos.",
+    "lugar": "Centro de Innovación Tecnológica",
+    "imagen": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500"
+  },
+  {
+    "id": "nw-003",
+    "titulo": "Festival Gastronómico Local",
+    "categoria": "Cultura",
+    "fecha": "2026-10-22T12:30:00",
+    "descripcion": "Muestra de platos tradicionales, chefs invitados y degustación de productos artesanales de la región.",
+    "lugar": "Plaza Principal",
+    "imagen": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500"
+  },
+  {
+    "id": "nw-004",
+    "titulo": "Jornada de Reforestación Comunitaria",
+    "categoria": "Medio Ambiente",
+    "fecha": "2026-11-02T08:00:00",
+    "descripcion": "Actividad ecológica enfocada en la siembra de árboles nativos y la conservación de fuentes hídricas.",
+    "lugar": "Parque Ecológico Central",
+    "imagen": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=500"
+  },
+  {
+    "id": "nw-005",
+    "titulo": "Torneo Intermunicipal de Baloncesto",
+    "categoria": "Deportes",
+    "fecha": "2026-11-10T15:00:00",
+    "descripcion": "Competencia deportiva con la participación de equipos regionales en categorías femenina y masculina.",
+    "lugar": "Coliseo Municipal",
+    "imagen": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=500"
+  }
 ]
