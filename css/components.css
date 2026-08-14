@@ -795,3 +795,31 @@
   color: #16a34a;
   background-color: #f0fdf4;
 }
+
+@media (max-width: 768px) {
+  .proximos-banner {
+    padding: 1rem;
+  }
+
+  .cards-banner-body {
+    gap: 0;
+  }
+
+  .cards-banner-body .banner-btn {
+    display: none;
+  }
+
+  .card-track {
+    flex: 0 0 100%;
+    gap: 1rem;
+    padding-inline: 0;
+  }
+
+  .card-track .event-card {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    scroll-snap-align: start;
+  }
+}
